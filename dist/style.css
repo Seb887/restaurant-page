@@ -8,16 +8,17 @@ body {
 
 :root {
   --background-light: rgba(0, 0, 0, 0.6);
-  --background-dark: rgba(0, 0, 0, 0.9);
+  --background-dark: rgba(0, 0, 0, 0.8);
   --second-bg: #2d2d33;
   --font-color: #eee;
+  --font-accent-color: rgb(139, 180, 113);
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100vw;
   height: 100vh;
+  background-image: url(./images/background2);
+  background-size: cover;
 }
 
 .header {
@@ -27,13 +28,19 @@ body {
   align-items: center;
   padding-bottom: 2rem;
   border-bottom: solid 1px grey;
-  background-color: var(--background-light);
+  background-color: var(--background-dark);
 }
 
 .title {
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   font-size: 100px;
+}
+
+.navTitle {
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+  color: var(--font-accent-color);
 }
 
 .nav {
@@ -43,27 +50,43 @@ body {
   font-size: xx-large;
 }
 
-.navTitle {
-  font-weight: bold;
-  font-family: 'Dancing Script', cursive;
-}
-
-.navLink > a {
+.navLink a {
   text-decoration: none;
   color: var(--font-color);
+  padding-bottom: 0.5rem;
 }
 
-.navLink > a.active {
-  border-bottom: 2px solid var(--font-color);
+.navLink .active {
+  border-bottom: 2px solid var(--font-accent-color);
 }
 
-.navLink > a:hover {
+.navLink:hover {
   transform: translateY(-10%);
-  padding-bottom: 20px;
 }
 
-.main {
+/* .main {
   display: flex;
   justify-content: center;
-  background-image: url(./images/background2);
+} */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  border-top: solid 1px grey;
+  background-color: var(--background-dark);
+}
+
+.footer > a {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.footer > a:hover {
+  color: var(--font-accent-color);
 }
