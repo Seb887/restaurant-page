@@ -1,19 +1,22 @@
 const content = document.querySelector('.content');
 
-const header = document.createElement('header');
-header.classList.add('header');
-const title = document.createElement('h1');
-title.classList.add('title');
-const navTitle = document.createElement('span');
-navTitle.classList.add('navTitle');
+// H1 Elemente erstellen
+const createHeader = () => {
+  const restaurantTitle = document.createElement('span');
+  restaurantTitle.classList.add('navTitle');
+  const title = document.createElement('h1');
+  title.classList.add('title');
 
-title.append(navTitle);
-header.append(title);
-content.append(header);
+  const header = document.createElement('header');
+  header.classList.add('header');
 
-const nav = document.createElement('nav');
-nav.classList.add('nav');
+  title.appendChild(restaurantTitle);
+  header.appendChild(title);
 
+  return header;
+};
+
+// NAV Elemente erstellen
 const navLinkHome = document.createElement('div');
 navLinkHome.classList.add('navLink');
 const navLinkMenu = document.createElement('div');
@@ -21,6 +24,7 @@ navLinkHome.classList.add('navLink');
 const navLinkContact = document.createElement('div');
 navLinkHome.classList.add('navLink');
 
+// NAV Links erstellen
 const aHome = document.createElement('a');
 aHome.href('#');
 aHome.classList.add('active');
@@ -34,14 +38,32 @@ const aContact = document.createElement('a');
 aContact.href('#contact');
 aContact.id('contact');
 aContact.textContent = 'Contact';
+const nav = document.createElement('nav');
+nav.classList.add('nav');
 
-navLinkHome.append(aHome);
-navLinkMenu.append(aMenu);
-navLinkContact.append(aContact);
-nav.append(navLinkHome);
-nav.append(navLinkMenu);
-nav.append(navLinkContact);
-header.append(nav);
+// Header erstellen
+
+// Home-Section erstellen
+const homeSection = document.createElement('div');
+homeSection.classList.add('homeSection');
+homeSection.id('homeSection');
+
+// H1 Elemente zusammenführen
+
+// NAV Elemente zusammenführen
+navLinkHome.appendChild(aHome);
+navLinkMenu.appendChild(aMenu);
+navLinkContact.appendChild(aContact);
+nav.appendChild(navLinkHome);
+nav.appendChild(navLinkMenu);
+nav.appendChild(navLinkContact);
+header.appendChild(nav);
+
+// Home-Section Elemente zusammenführen
+homeSection.append(header);
+
+// Home-Section in Content-Div einfügen
+content.append(homeSection);
 
 {
   /* <div
@@ -76,24 +98,6 @@ header.append(nav);
     </nav>
     </header>
     <!-- <main class="main"></main> -->
-    <footer class="footer">
-    <p>
-        <span>
-        Copyright ©
-        <script type="text/javascript">
-            const year = new Date();
-            document.write(year.getFullYear());
-        </script></span
-        >
-        Seb887
-    </p>
-    <a
-        class="pl-1 hover:text-sky-500"
-        href="https://github.com/seb887"
-        target="_blank"
-    >
-        <i class="fab fa-github"></i
-    ></a>
-    </footer>
+    
 </div> */
 }
