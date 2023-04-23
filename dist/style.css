@@ -37,7 +37,7 @@ body {
   font-size: 100px;
 }
 
-.navTitle {
+.restaurantTitle {
   font-weight: bold;
   font-family: 'Dancing Script', cursive;
   color: var(--font-accent-color);
