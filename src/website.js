@@ -1,5 +1,3 @@
-const content = document.querySelector('.content');
-
 const createHeaderTitle = () => {
   // H1 Elemente erstellen
   const restaurantTitle = document.createElement('span');
@@ -70,6 +68,7 @@ const createFooter = () => {
   return footer;
 };
 
+// Header Bereich esrtellen
 const createHeader = () => {
   // Header erstellen
   const header = document.createElement('header');
@@ -81,5 +80,15 @@ const createHeader = () => {
   return header;
 };
 
-content.appendChild(createHeader());
-content.appendChild(createFooter());
+const setHeaderAndFooter = () => {
+  const content = document.querySelector('.content');
+
+  content.appendChild(createHeader());
+  content.appendChild(createFooter());
+
+  return content;
+};
+
+setHeaderAndFooter();
+
+// export default setHeaderAndFooter;
