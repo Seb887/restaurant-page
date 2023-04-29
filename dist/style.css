@@ -4,6 +4,10 @@ body {
   box-sizing: border-box;
   background-color: var(--background-dark);
   color: var(--font-color);
+  background-image: url(./images/background3.png);
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-blend-mode: darken; */
 }
 
 :root {
@@ -16,9 +20,11 @@ body {
 
 .content {
   width: 100vw;
-  height: 100vh;
-  background-image: url(./images/background2);
-  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -61,7 +67,11 @@ body {
 }
 
 .navLink:hover {
-  transform: translateY(-10%);
+  transform: translateY(-15%);
+}
+
+.activate {
+  border-bottom: 1px solid var(--font-accent-color);
 }
 
 /* .main {
@@ -72,9 +82,7 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  position: absolute;
   width: 100vw;
-  bottom: 0;
   border-top: solid 1px grey;
   background-color: var(--background-dark);
 }
@@ -89,4 +97,31 @@ body {
 
 .footer > a:hover {
   color: var(--font-accent-color);
+}
+
+.homeSection {
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+.menuSection {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-light);
+  color: red;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  columns: 2;
+  width: 60vw;
+  height: 50vh;
+}
+
+.menuElement {
+  border: 5px solid blue;
 }

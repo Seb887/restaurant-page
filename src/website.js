@@ -8,7 +8,7 @@ const createHeaderTitle = () => {
   title.textContent = 'Pizzeria ';
 
   // H1 Elemente zusammenführen
-  title.appendChild(restaurantTitle);
+  title.append(restaurantTitle);
 
   return title;
 };
@@ -24,32 +24,49 @@ const createNavbar = () => {
 
   // NAV Links erstellen
   const aHome = document.createElement('a');
-  aHome.href = '#';
   aHome.id = 'home';
   aHome.textContent = 'Home';
   const aMenu = document.createElement('a');
-  aMenu.href = '#menu';
   aMenu.id = 'menu';
   aMenu.textContent = 'Menu';
   const aContact = document.createElement('a');
-  aContact.href = '#contact';
   aContact.id = 'contact';
   aContact.textContent = 'Contact';
   const nav = document.createElement('nav');
   nav.classList.add('nav');
 
   // NAV Elemente zusammenführen
-  navLinkHome.appendChild(aHome);
-  navLinkMenu.appendChild(aMenu);
-  navLinkContact.appendChild(aContact);
-  nav.appendChild(navLinkHome);
-  nav.appendChild(navLinkMenu);
-  nav.appendChild(navLinkContact);
+  navLinkHome.append(aHome);
+  navLinkMenu.append(aMenu);
+  navLinkContact.append(aContact);
+  nav.append(navLinkHome);
+  nav.append(navLinkMenu);
+  nav.append(navLinkContact);
 
   return nav;
 };
 
-const createFooter = () => {
+// Header Bereich erstellen
+export const createHeader = () => {
+  // Header-Bereich erstellen
+  const header = document.createElement('header');
+  header.classList.add('header');
+
+  header.append(createHeaderTitle());
+  header.append(createNavbar());
+
+  return header;
+};
+
+export const createMain = () => {
+  // Main-Bereich erstellen
+  const main = document.createElement('main');
+  main.classList.add('content');
+
+  return main;
+};
+
+export const createFooter = () => {
   const pElement = document.createElement('p');
   pElement.textContent = `Copyright © ${new Date().getFullYear()} - Seb887`;
 
@@ -58,37 +75,13 @@ const createFooter = () => {
   const aElement = document.createElement('a');
   aElement.href = 'https://github.com/seb887';
   aElement.target = '_blank';
-  aElement.appendChild(iElement);
+  aElement.append(iElement);
 
+  // Footer-Bereich erstellen
   const footer = document.createElement('footer');
   footer.classList.add('footer');
-  footer.appendChild(pElement);
-  footer.appendChild(aElement);
+  footer.append(pElement);
+  footer.append(aElement);
 
   return footer;
 };
-
-// Header Bereich esrtellen
-const createHeader = () => {
-  // Header erstellen
-  const header = document.createElement('header');
-  header.classList.add('header');
-
-  header.appendChild(createHeaderTitle());
-  header.appendChild(createNavbar());
-
-  return header;
-};
-
-const setHeaderAndFooter = () => {
-  const content = document.querySelector('.content');
-
-  content.appendChild(createHeader());
-  content.appendChild(createFooter());
-
-  return content;
-};
-
-setHeaderAndFooter();
-
-// export default setHeaderAndFooter;

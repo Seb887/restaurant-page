@@ -1,11 +1,16 @@
-// import setHeaderAndFooter from 'website';
+import { createHeader, createFooter } from './website.js';
 
-setHeaderAndFooter();
+const homeBtn = document.querySelector('#home');
+const menuBtn = document.querySelector('#menu');
+const contactBtn = document.querySelector('#contact');
 
 // Home-Section erstellen
-const homeSection = document.createElement('div');
-homeSection.classList.add('homeSection');
-homeSection.id = 'homeSection';
+export const createHome = () => {
+  const homeSection = document.createElement('div');
+  homeSection.classList.add('homeSection');
+  homeSection.id = 'homeSection';
+  homeSection.textContent = 'Hello World';
 
-// Home-Section in Content-Div einfügen
-content.appendChild(homeSection);
+  const content = document.querySelector('.content');
+  content.append(homeSection);
+};
