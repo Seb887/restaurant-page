@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,27 +7,26 @@ body {
   background-image: url(./images/background3.png);
   background-attachment: fixed;
   background-size: cover;
-  /* background-blend-mode: darken; */
-}
+} */
 
 :root {
-  --background-light: rgba(0, 0, 0, 0.6);
-  --background-dark: rgba(0, 0, 0, 0.8);
+  --background-light: #00000099;
+  --background-dark: #000000cc;
   --second-bg: #2d2d33;
   --font-color: #eee;
-  --font-accent-color: rgb(139, 180, 113);
+  --font-accent-color: #8bb471;
 }
 
-.content {
+/* .content {
   width: 100vw;
-}
+} */
 
 .container {
   display: flex;
   justify-content: center;
 }
 
-.header {
+/* .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,40 +34,40 @@ body {
   padding-bottom: 2rem;
   border-bottom: solid 1px grey;
   background-color: var(--background-dark);
-}
+} */
 
-.title {
+/* .title {
   margin-top: 2rem;
   margin-bottom: 3rem;
   font-size: 100px;
-}
+} */
 
-.restaurantTitle {
+/* .restaurantTitle {
   font-weight: bold;
   font-family: 'Dancing Script', cursive;
   color: var(--font-accent-color);
-}
+} */
 
-.nav {
+/* .nav {
   display: flex;
   justify-content: space-between;
   width: 30vw;
   font-size: xx-large;
-}
+} */
 
-.navLink a {
+/* .navLink a {
   text-decoration: none;
   color: var(--font-color);
   padding-bottom: 0.5rem;
-}
+} */
 
-.navLink .active {
+/* .navLink .active {
   border-bottom: 2px solid var(--font-accent-color);
-}
+} */
 
-.navLink:hover {
+/* .navLink:hover {
   transform: translateY(-15%);
-}
+} */
 
 .activate {
   border-bottom: 1px solid var(--font-accent-color);
@@ -79,40 +78,40 @@ body {
   justify-content: center;
 } */
 
-.footer {
+/* .footer {
   display: flex;
   justify-content: center;
   width: 100vw;
   border-top: solid 1px grey;
   background-color: var(--background-dark);
-}
+} */
 
-.footer > a {
+/* .footer > a {
   display: flex;
   align-items: center;
   padding-left: 0.5rem;
   color: var(--font-color);
   text-decoration: none;
-}
+} */
 
-.footer > a:hover {
+/* .footer > a:hover {
   color: var(--font-accent-color);
-}
+} */
 
-.homeSection {
+/* .homeSection {
   display: flex;
   justify-content: center;
   height: auto;
-}
+} */
 
-.menuSection {
+/* .menuSection {
   display: flex;
   justify-content: center;
   background-color: var(--background-light);
   color: red;
-}
+} */
 
-.menuContainer {
+/* .menuContainer {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -120,8 +119,8 @@ body {
   columns: 2;
   width: 60vw;
   height: 50vh;
-}
+} */
 
-.menuElement {
+/* .menuElement {
   border: 5px solid blue;
-}
+} */

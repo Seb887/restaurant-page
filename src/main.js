@@ -3,25 +3,34 @@ import { createHome } from './home.js';
 import { createMenu } from './menu.js';
 
 const body = document.querySelector('body');
-const content = document.querySelector('.content');
 
 body.prepend(createFooter());
 body.prepend(createMain());
 body.prepend(createHeader());
 
-const start = () => {
-  createHome();
-};
-
-const clearContent = () => {
-  while (content.firstChild) {
-    content.removeChild(content.firstChild);
-  }
-};
+const content = document.querySelector('.content');
 
 const homeBtn = document.querySelector('#home');
 const menuBtn = document.querySelector('#menu');
 const contactBtn = document.querySelector('#contact');
+
+function start() {
+  createHome();
+  homeBtn.parentElement.classList.add('activate');
+  if (menuBtn.parentElement.classList.contains('activate')) {
+    menuBtn.parentElement.classList.remove('activate');
+  } else if (contactBtn.parentElement.classList.contains('activate')) {
+    contactBtn.parentElement.classList.remove('activate');
+  }
+}
+
+start();
+
+function clearContent() {
+  while (content.firstChild) {
+    content.removeChild(content.firstChild);
+  }
+}
 
 // console.log('home', home);
 // console.log('menu', menu);
@@ -38,7 +47,7 @@ homeBtn.addEventListener('click', () => {
 });
 
 menuBtn.addEventListener('click', () => {
-  // clearContent();
+  clearContent();
   createMenu();
   menuBtn.parentElement.classList.add('activate');
   if (menuBtn.parentElement.classList.contains('activate')) {
