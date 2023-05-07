@@ -6,7 +6,7 @@ export function createMenu() {
     'flex',
     'justify-center',
     'flex-col',
-    'columns-2',
+    // 'columns-2',
     'w-4/5',
     'p-5',
     'pt-0',
@@ -16,7 +16,7 @@ export function createMenu() {
   menuContainer.id = 'menuContainer';
 
   const menuSection = document.createElement('div');
-  menuSection.classList.add('menuSection', 'flex', 'justify-center');
+  menuSection.classList.add('menuSection'); // , 'flex', 'justify-center'
   menuSection.id = 'menuSection';
 
   menuContainer.append(

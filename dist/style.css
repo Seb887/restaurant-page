@@ -70,7 +70,7 @@
 } */
 
 .activate {
-  border-bottom: 1px solid var(--font-accent-color);
+  border-bottom: 3px solid var(--font-accent-color);
 }
 
 /* .main {
